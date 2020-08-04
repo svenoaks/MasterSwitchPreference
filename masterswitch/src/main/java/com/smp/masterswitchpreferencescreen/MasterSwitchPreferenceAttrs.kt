@@ -2,8 +2,10 @@ package com.smp.masterswitchpreferencescreen
 
 import android.graphics.Color
 import android.os.Parcelable
+import androidx.annotation.Keep
 import kotlinx.android.parcel.Parcelize
 
+@Keep
 @Parcelize
 class MasterSwitchPreferenceAttrs(
         val switchThumbColor: Int = Color.WHITE,

@@ -12,7 +12,7 @@ import androidx.recyclerview.widget.RecyclerView
 
 @Keep
 open class MasterSwitchPreferenceFragment : PreferenceFragmentCompat() {
-
+    @Keep
     companion object {
         fun newInstance(attrs: MasterSwitchPreferenceAttrs): MasterSwitchPreferenceFragment {
             val frag = MasterSwitchPreferenceFragment()

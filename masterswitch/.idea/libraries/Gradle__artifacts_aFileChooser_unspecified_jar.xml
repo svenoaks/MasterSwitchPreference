@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: artifacts:aFileChooser:unspecified@jar">
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/../aFileChooser/build/.transforms/ae218ebc109980a3e2736c92622fb8c9/jetified-aFileChooser-release/AndroidManifest.xml" />
+      <root url="jar://$PROJECT_DIR$/../aFileChooser/build/.transforms/ae218ebc109980a3e2736c92622fb8c9/jetified-aFileChooser-release/jars/classes.jar!/" />
+      <root url="file://$PROJECT_DIR$/../aFileChooser/build/.transforms/ae218ebc109980a3e2736c92622fb8c9/jetified-aFileChooser-release/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

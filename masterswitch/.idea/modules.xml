@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/836979176/aFileChooser.iml" filepath="$PROJECT_DIR$/.idea/modules/836979176/aFileChooser.iml" group="speed/aFileChooser" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/977696613/audiowave.iml" filepath="$PROJECT_DIR$/.idea/modules/977696613/audiowave.iml" group="speed/audiowave" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-1894743326/directorySelector.iml" filepath="$PROJECT_DIR$/.idea/modules/-1894743326/directorySelector.iml" group="speed/directorySelector" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-1913062704/jaudiotagger.iml" filepath="$PROJECT_DIR$/.idea/modules/-1913062704/jaudiotagger.iml" group="speed/jaudiotagger" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/masterswitch.iml" filepath="$PROJECT_DIR$/.idea/modules/masterswitch.iml" group="speed/masterswitch" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-2088800148/musicSpeed.iml" filepath="$PROJECT_DIR$/.idea/modules/-2088800148/musicSpeed.iml" group="speed/musicSpeed" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/1931266341/speed.iml" filepath="$PROJECT_DIR$/.idea/modules/1931266341/speed.iml" group="speed" />
+    </modules>
+  </component>
+</project>

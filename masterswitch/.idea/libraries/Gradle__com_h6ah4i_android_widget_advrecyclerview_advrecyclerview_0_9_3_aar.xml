@@ -1,0 +1,18 @@
+<component name="libraryTable">
+  <library name="Gradle: com.h6ah4i.android.widget.advrecyclerview:advrecyclerview:0.9.3@aar">
+    <ANNOTATIONS>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/e5191adaada5827689893441bd17300e/jetified-advrecyclerview-0.9.3/annotations.zip!/" />
+    </ANNOTATIONS>
+    <CLASSES>
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/e5191adaada5827689893441bd17300e/jetified-advrecyclerview-0.9.3/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/e5191adaada5827689893441bd17300e/jetified-advrecyclerview-0.9.3/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/e5191adaada5827689893441bd17300e/jetified-advrecyclerview-0.9.3/res" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.h6ah4i.android.widget.advrecyclerview/advrecyclerview/0.9.3/eff2fda41bfd3911d2031eac65db2201353eaa0d/advrecyclerview-0.9.3-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.h6ah4i.android.widget.advrecyclerview/advrecyclerview/0.9.3/2ee6977c726d8b4f910e12e23ab55624333f432a/advrecyclerview-0.9.3-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

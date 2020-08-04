@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Gradle: com.github.StephenVinouze:MaterialNumberPicker:1.0.6@aar">
+    <CLASSES>
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/52af00439ca7a1deee50dc520b3f00ee/jetified-MaterialNumberPicker-1.0.6/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/52af00439ca7a1deee50dc520b3f00ee/jetified-MaterialNumberPicker-1.0.6/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/52af00439ca7a1deee50dc520b3f00ee/jetified-MaterialNumberPicker-1.0.6/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.StephenVinouze/MaterialNumberPicker/1.0.6/4ec617a78053079562ce45cd674d9af1cc0afc13/MaterialNumberPicker-1.0.6-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

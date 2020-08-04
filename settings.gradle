@@ -1,0 +1,3 @@
+include ':masterswitch'
+include ':app'
+rootProject.name = "MasterSwitchPreference"

@@ -17,7 +17,7 @@ open class MasterSwitchPreferenceFragment : PreferenceFragmentCompat() {
         fun newInstance(attrs: MasterSwitchPreferenceAttrs): MasterSwitchPreferenceFragment {
             val frag = MasterSwitchPreferenceFragment()
             with(Bundle()) {
-                putParcelable("MasterSwitchAttrs", attrs)
+                putParcelable(ATTRS_KEY_NAME, attrs)
                 frag.arguments = this
             }
             return frag
@@ -25,7 +25,7 @@ open class MasterSwitchPreferenceFragment : PreferenceFragmentCompat() {
     }
 
     val attrs: MasterSwitchPreferenceAttrs by lazy {
-        requireArguments().getParcelable<MasterSwitchPreferenceAttrs>("MasterSwitchAttrs")!!
+        requireArguments().getParcelable<MasterSwitchPreferenceAttrs>(ATTRS_KEY_NAME)!!
     }
 
     override fun onCreatePreferences(savedInstanceState: Bundle?, rootKey: String?) {

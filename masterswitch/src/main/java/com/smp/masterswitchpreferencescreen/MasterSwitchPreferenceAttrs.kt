@@ -5,6 +5,8 @@ import android.os.Parcelable
 import androidx.annotation.Keep
 import kotlinx.android.parcel.Parcelize
 
+internal const val ATTRS_KEY_NAME = "MasterSwitchAttrs"
+
 @Keep
 @Parcelize
 class MasterSwitchPreferenceAttrs(

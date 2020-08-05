@@ -5,4 +5,5 @@
     <string name="title">Settings</string>
     <string name="some_other_key">another key</string>
     <string name="some_individual_key">an individual key</string>
+    <string name="some_special_key">special key</string>
 </resources>

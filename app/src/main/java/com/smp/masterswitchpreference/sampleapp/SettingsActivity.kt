@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.preference.Preference
 import androidx.preference.PreferenceFragmentCompat
+import com.smp.masterswitchpreference.MasterSwitchPreferenceFragment
 
 private const val TITLE_TAG = "settingsActivityTitle"
 
@@ -36,11 +37,10 @@ class SettingsActivity : AppCompatActivity(),
     }
 
     override fun onSupportNavigateUp(): Boolean {
-        if (supportFragmentManager.popBackStackImmediate()) {
-            return true
+        if (!supportFragmentManager.popBackStackImmediate()) {
+            finish()
         }
-        finish()
-        return super.onSupportNavigateUp()
+        return true
     }
 
     override fun onPreferenceStartFragment(
@@ -69,5 +69,12 @@ class SettingsActivity : AppCompatActivity(),
 class RootSettingsFragment : PreferenceFragmentCompat() {
     override fun onCreatePreferences(savedInstanceState: Bundle?, rootKey: String?) {
         addPreferencesFromResource(R.xml.settings_root)
+    }
+}
+
+class ExtendMasterSwitchPreferenceFragment : MasterSwitchPreferenceFragment() {
+    override fun onCreatePreferences(savedInstanceState: Bundle?, rootKey: String?) {
+        super.onCreatePreferences(savedInstanceState, rootKey)
+        findPreference<Preference>("extend key")?.summary = "Extend frag changed this"
     }
 }

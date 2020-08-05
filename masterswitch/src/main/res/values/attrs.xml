@@ -1,18 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <declare-styleable name="MasterSwitchPreferenceScreen">
+    <declare-styleable name="MasterSwitchPreference">
         <attr name="ms_switchThumbColor" format="color" />
         <attr name="ms_switchTrackColor" format="color" />
         <attr name="ms_switchOnBackgroundColor" format="color" />
         <attr name="ms_switchOffBackgroundColor" format="color" />
         <attr name="ms_switchTextColor" format="color" />
         <attr name="ms_explanationText" format="string" />
-        <attr name="ms_includedPrefsScreen" format="integer"/>
-        <attr name="ms_excludedPrefsScreen" format="integer"/>
-        <attr name="ms_switchTextOn" format="string" />
-        <attr name="ms_switchTextOff" format="string" />
-        <attr name="ms_preferenceScreenRes" format="integer" />
-        <attr name="ms_switch_default" format="boolean"/>
+        <attr name="ms_includedPrefScreen" format="integer"/>
+        <attr name="ms_excludedPrefScreen" format="integer"/>
+        <attr name="ms_switchOnText" format="string" />
+        <attr name="ms_switchOffText" format="string" />
         <attr name="ms_hideExplanation" format="boolean"/>
         <attr name="ms_explanationIcon" format="string"/>
         <attr name="ms_showStatusInSummary" format="boolean"/>

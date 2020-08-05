@@ -1,4 +1,4 @@
-package com.smp.masterswitchpreferencescreen
+package com.smp.masterswitchpreference
 
 import android.content.Context
 import android.os.Bundle
@@ -36,7 +36,7 @@ open class MasterSwitchPreferenceFragment : PreferenceFragmentCompat() {
         preferenceScreen.addPreference(masterSwitchPreference)
         addPreferencesFromResource(R.xml.explanation_preference_screen)
         val explanationText = findPreference<Preference>("com_smp_explanation_key")!!
-        attrs.includedPrefScreenRes?.let {
+        attrs.includedPrefScreen?.let {
             addPreferencesFromResource(it)
         }
         val includedPrefs = mutableListOf<Preference>()
@@ -46,7 +46,7 @@ open class MasterSwitchPreferenceFragment : PreferenceFragmentCompat() {
             includedPrefs.add(pref)
         }
 
-        attrs.notIncludedPrefScreenRes?.let {
+        attrs.excludedPrefScreen?.let {
             addPreferencesFromResource(it)
         }
 
@@ -82,9 +82,9 @@ open class MasterSwitchPreferenceFragment : PreferenceFragmentCompat() {
 
         fun titleValue(on: Boolean): String =
                 if (on) {
-                    attrs.switchTextOn
+                    attrs.switchOnText
                 } else {
-                    attrs.switchTextOff
+                    attrs.switchOffText
                 }
 
         masterSwitch.apply {

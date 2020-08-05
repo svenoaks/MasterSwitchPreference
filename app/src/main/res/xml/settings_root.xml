@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.smp.masterswitchpreference.MasterSwitchPreference
+        app:defaultValue="false"
+        app:icon="@drawable/ic_baseline_cake_24"
+        app:key="@string/some_key"
+        app:summary="Everything hides"
+        app:title="Master Switch Preference"
+        app:ms_switchThumbColor="@color/md_grey_50"
+        app:ms_switchTrackColor="#33FAFAFA"
+        app:ms_switchOffText="Off"
+        app:ms_switchOnText="On"
+        app:ms_switchOffBackgroundColor="@color/md_grey_600"
+        app:ms_switchOnBackgroundColor="@color/md_red_700"
+        app:ms_switchTextColor="#DEFFFFFF"
+        app:ms_explanationText="@string/explanation"
+        app:ms_explanationIcon="@drawable/ic_baseline_cake_24"
+        app:ms_includedPrefScreen="@xml/settings_master_switch_1" />
+
+    <com.smp.masterswitchpreference.MasterSwitchPreference
+        app:defaultValue="false"
+        app:icon="@drawable/ic_baseline_cake_24"
+        app:key="@string/some_other_key"
+        app:summary="Some of them don't hide"
+        app:title="Master Switch Preference"
+        app:ms_switchThumbColor="@color/md_grey_50"
+        app:ms_switchTrackColor="#33FAFAFA"
+        app:ms_switchOffText="Off"
+        app:ms_switchOnText="On"
+        app:ms_switchOffBackgroundColor="@color/md_grey_600"
+        app:ms_switchOnBackgroundColor="@color/md_red_700"
+        app:ms_switchTextColor="#DEFFFFFF"
+        app:ms_explanationText="@string/explanation"
+        app:ms_explanationIcon="@drawable/ic_baseline_cake_24"
+        app:ms_includedPrefScreen="@xml/settings_master_switch_1"
+        app:ms_excludedPrefScreen="@xml/settings_master_switch_2"/>
+
+    <com.smp.masterswitchpreference.MasterSwitchPreference
+        app:defaultValue="false"
+        app:icon="@drawable/ic_baseline_cake_24"
+        app:key="@string/some_individual_key"
+        app:summary="Some of them don't hide"
+        app:title="Individual on/off switch"
+        app:ms_switchThumbColor="@color/md_grey_50"
+        app:ms_switchTrackColor="#33FAFAFA"
+        app:ms_switchOffText="Off"
+        app:ms_switchOnText="On"
+        app:ms_switchOffBackgroundColor="@color/md_grey_600"
+        app:ms_switchOnBackgroundColor="@color/md_red_700"
+        app:ms_switchTextColor="#DEFFFFFF"
+        app:ms_explanationText="@string/explanation"
+        app:ms_explanationIcon="@drawable/ic_baseline_cake_24"
+        app:ms_hideExplanation="false"
+        app:ms_showStatusInSummary="true"/>
+</PreferenceScreen>

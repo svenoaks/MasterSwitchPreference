@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <Preference app:title="Some preference" app:summary="With a summary"/>
+    <CheckBoxPreference app:title="Control the thing" app:summary="Tell us"/>
+    <CheckBoxPreference app:title="Control the other thing"/>
+    <SeekBarPreference app:title="Seek things"/>
+    <Preference app:title="Some preference" app:summary="With a summary"/>
+</PreferenceScreen>

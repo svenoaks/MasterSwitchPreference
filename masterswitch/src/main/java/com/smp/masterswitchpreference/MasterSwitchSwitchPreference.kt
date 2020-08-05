@@ -1,10 +1,8 @@
-package com.smp.masterswitchpreferencescreen
+package com.smp.masterswitchpreference
 
 import android.content.Context
-import android.graphics.PorterDuff
 import android.util.AttributeSet
 import android.view.View
-import android.view.ViewGroup
 import android.widget.TextView
 import androidx.appcompat.widget.SwitchCompat
 import androidx.core.graphics.drawable.DrawableCompat

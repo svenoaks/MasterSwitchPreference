@@ -1,4 +1,4 @@
-package com.smp.masterswitchpreferencescreen
+package com.smp.masterswitchpreference
 
 import android.graphics.Color
 import android.os.Parcelable
@@ -16,10 +16,10 @@ class MasterSwitchPreferenceAttrs(
         val switchOffBackgroundColor: Int = Color.LTGRAY,
         val switchTextColor: Int = Color.BLACK,
         val explanationText: String = "",
-        val includedPrefScreenRes: Int? = null,
-        val notIncludedPrefScreenRes: Int? = null,
-        val switchTextOn: String = "On",
-        val switchTextOff: String = "Off",
+        val includedPrefScreen: Int? = null,
+        val excludedPrefScreen: Int? = null,
+        val switchOnText: String = "On",
+        val switchOffText: String = "Off",
         val hideExplanation: Boolean = true,
         val key: String = "master_switch_key",
         val defaultValue: Boolean = false,

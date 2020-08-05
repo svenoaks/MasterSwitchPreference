@@ -1,4 +1,4 @@
-package com.smp.masterswitchpreferencescreen
+package com.smp.masterswitchpreference
 
 import android.content.Context
 import android.os.Parcel
@@ -81,7 +81,7 @@ class MasterSwitchPreference : Preference {
     private fun inflateAttrs(attrs: AttributeSet?) {
         val resAttrs = context.theme.obtainStyledAttributes(
                 attrs,
-                R.styleable.MasterSwitchPreferenceScreen,
+                R.styleable.MasterSwitchPreference,
                 0,
                 0
         ) ?: return
@@ -89,9 +89,9 @@ class MasterSwitchPreference : Preference {
         with(resAttrs) {
             val androidAttrs = context.theme.obtainStyledAttributes(attrs, R.styleable.Preference, 0, 0)
 
-            val includedPrefScreenRes: String? = getString(R.styleable.MasterSwitchPreferenceScreen_ms_includedPrefsScreen)
-            val notIncludedPrefScreenRes: String? = getString(R.styleable.MasterSwitchPreferenceScreen_ms_excludedPrefsScreen)
-            val icon: String? = getString(R.styleable.MasterSwitchPreferenceScreen_ms_explanationIcon)
+            val includedPrefScreenRes: String? = getString(R.styleable.MasterSwitchPreference_ms_includedPrefScreen)
+            val notIncludedPrefScreenRes: String? = getString(R.styleable.MasterSwitchPreference_ms_excludedPrefScreen)
+            val icon: String? = getString(R.styleable.MasterSwitchPreference_ms_explanationIcon)
 
             fun resInt(resName: String?, type: String): Int? {
                 if (resName == null) return null
@@ -102,21 +102,21 @@ class MasterSwitchPreference : Preference {
             val def = MasterSwitchPreferenceAttrs()
 
             val attrs = MasterSwitchPreferenceAttrs(
-                    switchThumbColor = getColor(R.styleable.MasterSwitchPreferenceScreen_ms_switchThumbColor, def.switchThumbColor),
-                    switchTrackColor = getColor(R.styleable.MasterSwitchPreferenceScreen_ms_switchTrackColor, def.switchTrackColor),
-                    switchOnBackgroundColor = getColor(R.styleable.MasterSwitchPreferenceScreen_ms_switchOnBackgroundColor, def.switchOnBackgroundColor),
-                    switchOffBackgroundColor = getColor(R.styleable.MasterSwitchPreferenceScreen_ms_switchOffBackgroundColor, def.switchOffBackgroundColor),
-                    switchTextColor = getColor(R.styleable.MasterSwitchPreferenceScreen_ms_switchTextColor, def.switchTextColor),
-                    explanationText = getString(R.styleable.MasterSwitchPreferenceScreen_ms_explanationText)
+                    switchThumbColor = getColor(R.styleable.MasterSwitchPreference_ms_switchThumbColor, def.switchThumbColor),
+                    switchTrackColor = getColor(R.styleable.MasterSwitchPreference_ms_switchTrackColor, def.switchTrackColor),
+                    switchOnBackgroundColor = getColor(R.styleable.MasterSwitchPreference_ms_switchOnBackgroundColor, def.switchOnBackgroundColor),
+                    switchOffBackgroundColor = getColor(R.styleable.MasterSwitchPreference_ms_switchOffBackgroundColor, def.switchOffBackgroundColor),
+                    switchTextColor = getColor(R.styleable.MasterSwitchPreference_ms_switchTextColor, def.switchTextColor),
+                    explanationText = getString(R.styleable.MasterSwitchPreference_ms_explanationText)
                             ?: def.explanationText,
-                    includedPrefScreenRes = resInt(includedPrefScreenRes, "xml")
-                            ?: def.includedPrefScreenRes,
-                    notIncludedPrefScreenRes = resInt(notIncludedPrefScreenRes, "xml")
-                            ?: def.notIncludedPrefScreenRes,
-                    switchTextOn = getString(R.styleable.MasterSwitchPreferenceScreen_ms_switchTextOn)
-                            ?: def.switchTextOn,
-                    switchTextOff = getString(R.styleable.MasterSwitchPreferenceScreen_ms_switchTextOff)
-                            ?: def.switchTextOff,
+                    includedPrefScreen = resInt(includedPrefScreenRes, "xml")
+                            ?: def.includedPrefScreen,
+                    excludedPrefScreen = resInt(notIncludedPrefScreenRes, "xml")
+                            ?: def.excludedPrefScreen,
+                    switchOnText = getString(R.styleable.MasterSwitchPreference_ms_switchOnText)
+                            ?: def.switchOnText,
+                    switchOffText = getString(R.styleable.MasterSwitchPreference_ms_switchOffText)
+                            ?: def.switchOffText,
                     key = this@MasterSwitchPreference.key ?: def.key,
                     defaultValue = when {
                         androidAttrs.hasValue(R.styleable.Preference_defaultValue) -> {
@@ -129,9 +129,9 @@ class MasterSwitchPreference : Preference {
                             def.defaultValue
                         }
                     },
-                    hideExplanation = getBoolean(R.styleable.MasterSwitchPreferenceScreen_ms_hideExplanation, def.hideExplanation),
+                    hideExplanation = getBoolean(R.styleable.MasterSwitchPreference_ms_hideExplanation, def.hideExplanation),
                     explanationIcon = resInt(icon, "drawable") ?: def.explanationIcon,
-                    showStatus = getBoolean(R.styleable.MasterSwitchPreferenceScreen_ms_showStatusInSummary, def.showStatus)
+                    showStatus = getBoolean(R.styleable.MasterSwitchPreference_ms_showStatusInSummary, def.showStatus)
             )
 
             val fragName = when {
@@ -158,7 +158,7 @@ class MasterSwitchPreference : Preference {
     private fun setupStatus() {
         if (attrs.showStatus) {
             val on = getPersistedBoolean(attrs.defaultValue)
-            summary = if (on) attrs.switchTextOn else attrs.switchTextOff
+            summary = if (on) attrs.switchOnText else attrs.switchOffText
         }
     }
 }

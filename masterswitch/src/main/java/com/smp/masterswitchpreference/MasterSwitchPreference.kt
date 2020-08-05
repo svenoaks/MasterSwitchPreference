@@ -4,11 +4,12 @@ import android.content.Context
 import android.os.Parcel
 import android.os.Parcelable
 import android.util.AttributeSet
+import androidx.annotation.Keep
 import androidx.preference.Preference
 import java.io.File
 
-
-class MasterSwitchPreference : Preference {
+@Keep
+open class MasterSwitchPreference : Preference {
     constructor(context: Context?, attrs: AttributeSet?, defStyleAttr: Int, defStyleRes: Int) : super(context, attrs, defStyleAttr, defStyleRes) {
         inflateAttrs(attrs)
     }
@@ -87,7 +88,7 @@ class MasterSwitchPreference : Preference {
         ) ?: return
 
         with(resAttrs) {
-            val androidAttrs = context.theme.obtainStyledAttributes(attrs, R.styleable.Preference, 0, 0)
+            val libraryAttrs = context.theme.obtainStyledAttributes(attrs, R.styleable.Preference, 0, 0)
 
             val includedPrefScreenRes: String? = getString(R.styleable.MasterSwitchPreference_ms_includedPrefScreen)
             val notIncludedPrefScreenRes: String? = getString(R.styleable.MasterSwitchPreference_ms_excludedPrefScreen)
@@ -119,11 +120,11 @@ class MasterSwitchPreference : Preference {
                             ?: def.switchOffText,
                     key = this@MasterSwitchPreference.key ?: def.key,
                     defaultValue = when {
-                        androidAttrs.hasValue(R.styleable.Preference_defaultValue) -> {
-                            androidAttrs.getBoolean(R.styleable.Preference_defaultValue, false)
+                        libraryAttrs.hasValue(R.styleable.Preference_defaultValue) -> {
+                            libraryAttrs.getBoolean(R.styleable.Preference_defaultValue, false)
                         }
-                        androidAttrs.hasValue(R.styleable.Preference_android_defaultValue) -> {
-                            androidAttrs.getBoolean(R.styleable.Preference_android_defaultValue, false)
+                        libraryAttrs.hasValue(R.styleable.Preference_android_defaultValue) -> {
+                            libraryAttrs.getBoolean(R.styleable.Preference_android_defaultValue, false)
                         }
                         else -> {
                             def.defaultValue
@@ -135,11 +136,11 @@ class MasterSwitchPreference : Preference {
             )
 
             val fragName = when {
-                androidAttrs.hasValue(R.styleable.Preference_fragment) -> {
-                    androidAttrs.getString(R.styleable.Preference_fragment)
+                libraryAttrs.hasValue(R.styleable.Preference_fragment) -> {
+                    libraryAttrs.getString(R.styleable.Preference_fragment)
                 }
-                androidAttrs.hasValue(R.styleable.Preference_android_fragment) -> {
-                    androidAttrs.getString(R.styleable.Preference_android_fragment)
+                libraryAttrs.hasValue(R.styleable.Preference_android_fragment) -> {
+                    libraryAttrs.getString(R.styleable.Preference_android_fragment)
                 }
                 else -> {
                     MasterSwitchPreferenceFragment::class.qualifiedName
@@ -151,7 +152,7 @@ class MasterSwitchPreference : Preference {
             extras.putParcelable(ATTRS_KEY_NAME, attrs)
 
             recycle()
-            androidAttrs.recycle()
+            libraryAttrs.recycle()
         }
     }
 

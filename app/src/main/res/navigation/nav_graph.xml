@@ -14,7 +14,7 @@
         android:id="@+id/masterSwitchPreferencerFragment"
         android:name="com.smp.masterswitchpreference.MasterSwitchPreferenceFragment"
         android:label="{title}">
-        <!--It's a little bit wonky, but we need to set the argument of the action to the name of the fragment here.-->
+        <!--It's a bit wonky, but we need to set the name of an argument to the name of the fragment here.-->
         <argument
             android:name="com.smp.masterswitchpreference.MasterSwitchPreferenceFragment"
             app:argType="string" />

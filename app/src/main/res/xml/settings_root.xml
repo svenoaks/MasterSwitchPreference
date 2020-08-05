@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
+
     <com.smp.masterswitchpreference.MasterSwitchPreference
         app:defaultValue="false"
         app:icon="@drawable/ic_baseline_cake_24"
@@ -40,7 +41,6 @@
         app:defaultValue="false"
         app:icon="@drawable/ic_baseline_cake_24"
         app:key="@string/some_individual_key"
-        app:summary="Some of them don't hide"
         app:title="Individual on/off switch"
         app:ms_switchThumbColor="@color/md_grey_50"
         app:ms_switchTrackColor="@color/switch_track_color"

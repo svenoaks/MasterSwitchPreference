@@ -1,5 +1,7 @@
 # MasterSwitchPreference
 
+[![](https://jitpack.io/v/svenoaks/MasterSwitchPreference.svg)](https://jitpack.io/#svenoaks/MasterSwitchPreference)
+
 MasterSwitchPreference provides an AndroidX implementation of two patterns found in the [Material Design guidelines for Android settings](https://material.io/design/platform-guidance/android-settings.html#label-and-secondary-text). 
 
   - **Master on and off switch**
@@ -66,4 +68,18 @@ The library also provides the preference to place in your root Settings screen, 
 
 ```
 
-There are examples in the sample app for various configurations, including how to extend `MasterSwitchPreferenceFragment` in case you need to do things like bind summaries to values, use `MasterSwitchPreferenceFragment` directly without going through Settings, or use the library with the Navigation component.
+There are examples in the sample app for various configurations, including:
+
+  - How to extend `MasterSwitchPreferenceFragment` in case you need to do things like bind summaries to values.
+  - Inlucde preferences in the master switch screen which never hide.
+  - Use `MasterSwitchPreferenceFragment` directly without going through Settings.
+  - Use the library with the Navigation component.
+  
+
+```
+
+	dependencies {
+	        implementation 'com.github.svenoaks:MasterSwitchPreference:0.9.1'
+	}
+
+```

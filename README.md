@@ -77,7 +77,6 @@ There are examples in the sample app for various configurations, including:
   
 
 ```
-
 	dependencies {
 	        implementation 'com.github.svenoaks:MasterSwitchPreference:0.9.1'
 	}

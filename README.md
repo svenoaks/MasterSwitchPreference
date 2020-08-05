@@ -1,7 +1,6 @@
 # MasterSwitchPreference
 
-[![0.9.1](https://jitpack.io/v/svenoaks/MasterSwitchPreference.svg)]
-(https://jitpack.io/#svenoaks/MasterSwitchPreference)
+[![](https://jitpack.io/v/svenoaks/MasterSwitchPreference.svg)](https://jitpack.io/#svenoaks/MasterSwitchPreference)
 
 MasterSwitchPreference provides an AndroidX implementation of two patterns found in the [Material Design guidelines for Android settings](https://material.io/design/platform-guidance/android-settings.html#label-and-secondary-text). 
 

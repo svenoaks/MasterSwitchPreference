@@ -7,8 +7,7 @@
     <fragment
         android:id="@+id/rootSettingsFragment"
         android:name="com.smp.masterswitchpreference.sampleapp.RootSettingsFragment"
-        android:label="RootSettingsFragment" />
-
+        android:label="@string/title_settings" />
 
     <fragment
         android:id="@+id/masterSwitchPreferencerFragment"

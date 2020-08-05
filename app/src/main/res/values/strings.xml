@@ -2,8 +2,9 @@
     <string name="app_name">MasterSwitchPreference</string>
     <string name="some_key">a key</string>
     <string name="explanation">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.\n\nDuis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</string>
-    <string name="title">Settings</string>
+    <string name="title_settings">Settings</string>
     <string name="some_other_key">another key</string>
     <string name="some_individual_key">an individual key</string>
     <string name="some_special_key">special key</string>
+    <string name="title_master_switch">Master switch preference</string>
 </resources>

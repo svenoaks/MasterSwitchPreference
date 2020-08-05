@@ -19,12 +19,13 @@ class SettingsActivity : AppCompatActivity(),
                 .beginTransaction()
                 .replace(R.id.container, RootSettingsFragment())
                 .commit()
+            setTitle(R.string.title_settings)
         } else {
             title = savedInstanceState.getCharSequence(TITLE_TAG)
         }
         supportFragmentManager.addOnBackStackChangedListener {
             if (supportFragmentManager.backStackEntryCount == 0) {
-                setTitle(R.string.title)
+                setTitle(R.string.title_settings)
             }
         }
         supportActionBar?.setDisplayHomeAsUpEnabled(true)

@@ -56,7 +56,6 @@ open class MasterSwitchPreferenceFragment : PreferenceFragmentCompat() {
 
     private fun setupExplanationText(explanationText: Preference) {
         explanationText.apply {
-            summary = attrs.explanationText
             attrs.explanationIcon?.let { iconRes ->
                 setIcon(iconRes)
             }
@@ -75,6 +74,11 @@ open class MasterSwitchPreferenceFragment : PreferenceFragmentCompat() {
 
         fun handleExplanationText(on: Boolean) {
             if (attrs.hideExplanation) explanationText.isVisible = !on
+            explanationText.summary = if (on) {
+                attrs.switchOnExplanationText
+            } else {
+                attrs.switchOffExplanationText
+            }
             includedPrefs.forEach {
                 it.isVisible = on
             }

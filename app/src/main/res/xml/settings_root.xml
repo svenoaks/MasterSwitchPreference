@@ -14,7 +14,7 @@
         app:ms_switchOffBackgroundColor="@color/md_grey_600"
         app:ms_switchOnBackgroundColor="@color/md_red_900"
         app:ms_switchTextColor="@android:color/primary_text_dark"
-        app:ms_explanationText="@string/explanation"
+        app:ms_switchOffExplanationText="@string/off_explanation"
         app:ms_explanationIcon="@drawable/ic_baseline_cake_24"
         app:ms_includedPrefScreen="@xml/settings_master_switch_1" />
 
@@ -31,7 +31,7 @@
         app:ms_switchOffBackgroundColor="@color/md_grey_600"
         app:ms_switchOnBackgroundColor="@color/md_red_900"
         app:ms_switchTextColor="@android:color/primary_text_dark"
-        app:ms_explanationText="@string/explanation"
+        app:ms_switchOffExplanationText="@string/off_explanation"
         app:ms_explanationIcon="@drawable/ic_baseline_cake_24"
         app:ms_includedPrefScreen="@xml/settings_master_switch_1"
         app:ms_excludedPrefScreen="@xml/settings_master_switch_2"/>
@@ -49,7 +49,8 @@
         app:ms_switchOffBackgroundColor="@color/md_grey_600"
         app:ms_switchOnBackgroundColor="@color/md_red_900"
         app:ms_switchTextColor="@android:color/primary_text_dark"
-        app:ms_explanationText="@string/explanation"
+        app:ms_switchOffExplanationText="@string/off_explanation"
+        app:ms_switchOnExplanationText="@string/on_explanation"
         app:ms_explanationIcon="@drawable/ic_baseline_cake_24"
         app:ms_hideExplanation="false"
         app:ms_showStatusInSummary="true"/>
@@ -68,7 +69,7 @@
         app:ms_switchOffBackgroundColor="@color/md_grey_600"
         app:ms_switchOnBackgroundColor="@color/md_red_900"
         app:ms_switchTextColor="@android:color/primary_text_dark"
-        app:ms_explanationText="@string/explanation"
+        app:ms_switchOffExplanationText="@string/off_explanation"
         app:ms_explanationIcon="@drawable/ic_baseline_cake_24"
         app:ms_includedPrefScreen="@xml/settings_master_switch_1" />
 </PreferenceScreen>

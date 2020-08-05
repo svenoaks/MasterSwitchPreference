@@ -21,7 +21,7 @@ class FragmentActivity : AppCompatActivity() {
                 switchOffBackgroundColor = ContextCompat.getColor(this, R.color.md_grey_600),
                 switchOnBackgroundColor = ContextCompat.getColor(this, R.color.md_red_900),
                 switchTextColor = ContextCompat.getColor(this, android.R.color.primary_text_dark),
-                explanationText = getString(R.string.explanation),
+                switchOffExplanationText = getString(R.string.off_explanation),
                 explanationIcon = R.drawable.ic_baseline_cake_24,
                 includedPrefScreen = R.xml.settings_master_switch_1
             )

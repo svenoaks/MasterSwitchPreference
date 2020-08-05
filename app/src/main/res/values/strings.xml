@@ -1,7 +1,8 @@
 <resources>
     <string name="app_name">MasterSwitchPreference</string>
     <string name="some_key">a key</string>
-    <string name="explanation">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.\n\nDuis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</string>
+    <string name="off_explanation">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.\n\nDuis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</string>
+    <string name="on_explanation">The purpose of lorem ipsum is to create a natural looking block of text (sentence, paragraph, page, etc.) that doesn\'t distract from the layout.\n\nA practice not without controversy, laying out pages with meaningless filler text can be very useful when the focus is meant to be on design, not content. </string>
     <string name="title_settings">Settings</string>
     <string name="some_other_key">another key</string>
     <string name="some_individual_key">an individual key</string>

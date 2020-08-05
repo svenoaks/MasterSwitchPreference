@@ -6,26 +6,27 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-   <Button
-       android:id="@+id/btn1"
-       android:layout_width="0dp"
-       android:layout_height="wrap_content"
-       android:text="Settings"
-       android:onClick="settingsClick"
-       app:layout_constraintStart_toStartOf="parent"
-       app:layout_constraintEnd_toStartOf="@+id/btn2"
-       app:layout_constraintBottom_toBottomOf="parent"
-       app:layout_constraintTop_toTopOf="parent"/>
+    <Button
+        android:id="@+id/btn1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:onClick="settingsClick"
+        android:text="Settings"
+        app:layout_constraintBottom_toTopOf="@+id/btn2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed" />
 
     <Button
         android:id="@+id/btn2"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="Fragment"
         android:onClick="fragmentClick"
-        app:layout_constraintStart_toEndOf="@id/btn1"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:text="Fragment"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn1" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

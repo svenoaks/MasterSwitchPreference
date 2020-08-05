@@ -12,8 +12,13 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
     }
 
-    fun fragmentClick(view: View) {}
+    fun fragmentClick(view: View) {
+        startActivity(Intent(this, FragmentActivity::class.java))
+    }
     fun settingsClick(view: View) {
        startActivity(Intent(this, SettingsActivity::class.java))
+    }
+    fun navigationClick(view: View) {
+        startActivity(Intent(this, NavigationActivity::class.java))
     }
 }

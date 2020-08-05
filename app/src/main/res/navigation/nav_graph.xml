@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph.xml"
+    app:startDestination="@id/rootSettingsFragment">
+
+    <fragment
+        android:id="@+id/rootSettingsFragment"
+        android:name="com.smp.masterswitchpreference.sampleapp.RootSettingsFragment"
+        android:label="RootSettingsFragment" />
+
+
+    <fragment
+        android:id="@+id/masterSwitchPreferencerFragment"
+        android:name="com.smp.masterswitchpreference.MasterSwitchPreferenceFragment"
+        android:label="{title}">
+        <!--It's a little bit wonky, but we need to set the argument of the action to the name of the fragment here.-->
+        <argument
+            android:name="com.smp.masterswitchpreference.MasterSwitchPreferenceFragment"
+            app:argType="string" />
+        <argument
+            android:name="title"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/extendMasterSwitchPreferenceFragment"
+        android:name="com.smp.masterswitchpreference.sampleapp.ExtendMasterSwitchPreferenceFragment"
+        android:label="{title}">
+        <argument
+            android:name="com.smp.masterswitchpreference.sampleapp.ExtendMasterSwitchPreferenceFragment"
+            app:argType="string" />
+        <argument
+            android:name="title"
+            app:argType="string" />
+    </fragment>
+</navigation>

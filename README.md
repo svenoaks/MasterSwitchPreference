@@ -70,7 +70,7 @@ The library also provides the preference to place in your root Settings screen, 
 There are examples in the sample app for various configurations, including:
 
   - How to extend `MasterSwitchPreferenceFragment` in case you need to do things like bind summaries to values.
-  - Inlucde preferences in the master switch screen which never hide.
+  - Include preferences in the master switch screen which never hide.
   - Use `MasterSwitchPreferenceFragment` directly without going through Settings.
   - Use the library with the Navigation component.
   

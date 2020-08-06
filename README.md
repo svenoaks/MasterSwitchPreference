@@ -47,7 +47,6 @@ The library also provides the preference to place in your root Settings screen, 
         app:defaultValue="false"
         app:icon="@drawable/ic_baseline_cake_24"
         app:key="@string/some_individual_key"
-        app:summary="Some of them don't hide"
         app:title="Individual on/off switch"
         app:ms_switchThumbColor="@color/md_grey_50"
         app:ms_switchTrackColor="@color/switch_track_color"

@@ -8,8 +8,8 @@
         <attr name="ms_switchTextColor" format="color" />
         <attr name="ms_switchOffExplanationText" format="string" />
         <attr name="ms_switchOnExplanationText" format="string" />
-        <attr name="ms_includedPrefScreen" format="integer"/>
-        <attr name="ms_excludedPrefScreen" format="integer"/>
+        <attr name="ms_includedPrefScreen" format="string"/>
+        <attr name="ms_excludedPrefScreen" format="string"/>
         <attr name="ms_switchOnText" format="string" />
         <attr name="ms_switchOffText" format="string" />
         <attr name="ms_hideExplanation" format="boolean"/>

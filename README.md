@@ -39,8 +39,8 @@ The library also provides the preference to place in your root Settings screen, 
         app:ms_switchOnBackgroundColor="@color/md_red_900"
         app:ms_switchTextColor="@android:color/primary_text_dark"
         app:ms_switchOffExplanationText="@string/off_explanation"
-        app:ms_explanationIcon="drawable/ic_baseline_cake_24" <-- Note the lack of "@" here
-        app:ms_includedPrefScreen="xml/settings_master_switch_1" />
+        app:ms_explanationIcon="drawable/ic_baseline_cake_24" <!- Note the lack of "@" here -->
+        app:ms_includedPrefScreen="xml/settings_master_switch_1" />  <!- Note the lack of "@" here -->
 
     <!--Typical configuration for individual on/off switch-->
     <com.smp.masterswitchpreference.MasterSwitchPreference

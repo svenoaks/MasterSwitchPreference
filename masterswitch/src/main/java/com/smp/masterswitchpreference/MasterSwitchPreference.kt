@@ -11,7 +11,7 @@ import java.io.File
 @Keep
 open class MasterSwitchPreference : Preference {
     constructor(
-        context: Context?,
+        context: Context,
         attrs: AttributeSet?,
         defStyleAttr: Int,
         defStyleRes: Int
@@ -19,7 +19,7 @@ open class MasterSwitchPreference : Preference {
         inflateAttrs(attrs)
     }
 
-    constructor(context: Context?, attrs: AttributeSet?, defStyleAttr: Int) : super(
+    constructor(context: Context, attrs: AttributeSet?, defStyleAttr: Int) : super(
         context,
         attrs,
         defStyleAttr
@@ -27,7 +27,7 @@ open class MasterSwitchPreference : Preference {
         inflateAttrs(attrs)
     }
 
-    constructor(context: Context?, attrs: AttributeSet?) : super(context, attrs) {
+    constructor(context: Context, attrs: AttributeSet?) : super(context, attrs) {
         inflateAttrs(attrs)
     }
 

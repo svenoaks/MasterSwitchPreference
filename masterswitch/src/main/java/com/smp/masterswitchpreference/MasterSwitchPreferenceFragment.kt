@@ -30,7 +30,7 @@ open class MasterSwitchPreferenceFragment : PreferenceFragmentCompat() {
 
     override fun onCreatePreferences(savedInstanceState: Bundle?, rootKey: String?) {
         addPreferencesFromResource(R.xml.blank_preference_screen)
-        val masterSwitchPreference = MasterSwitchSwitchPreference(context)
+        val masterSwitchPreference = MasterSwitchSwitchPreference(requireContext())
         masterSwitchPreference.key = attrs.key
         masterSwitchPreference.setDefaultValue(attrs.defaultValue)
         preferenceScreen.addPreference(masterSwitchPreference)
@@ -62,7 +62,7 @@ open class MasterSwitchPreferenceFragment : PreferenceFragmentCompat() {
         }
     }
 
-    override fun onCreateRecyclerView(inflater: LayoutInflater?, parent: ViewGroup?, state: Bundle?): RecyclerView? {
+    override fun onCreateRecyclerView(inflater: LayoutInflater, parent: ViewGroup, state: Bundle?): RecyclerView {
         return super.onCreateRecyclerView(inflater, parent, state).apply {
             itemAnimator = null
             layoutAnimation = null

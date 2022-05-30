@@ -11,10 +11,10 @@ import androidx.preference.SwitchPreferenceCompat
 
 internal class MasterSwitchSwitchPreference : SwitchPreferenceCompat {
 
-    constructor(context: Context?, attrs: AttributeSet?, defStyleAttr: Int) : super(context, attrs, defStyleAttr)
-    constructor(context: Context?, attrs: AttributeSet?) : super(context, attrs)
-    constructor(context: Context?) : super(context)
-    constructor(context: Context?, attrs: AttributeSet?, defStyleAttr: Int, defStyleRes: Int) : super(context, attrs, defStyleAttr, defStyleRes)
+    constructor(context: Context, attrs: AttributeSet?, defStyleAttr: Int) : super(context, attrs, defStyleAttr)
+    constructor(context: Context, attrs: AttributeSet?) : super(context, attrs)
+    constructor(context: Context) : super(context)
+    constructor(context: Context, attrs: AttributeSet?, defStyleAttr: Int, defStyleRes: Int) : super(context, attrs, defStyleAttr, defStyleRes)
 
     internal lateinit var attrs: MasterSwitchPreferenceAttrs
     
@@ -22,7 +22,7 @@ internal class MasterSwitchSwitchPreference : SwitchPreferenceCompat {
     private lateinit var switch: SwitchCompat
     private lateinit var text: TextView
 
-    override fun onBindViewHolder(holder: PreferenceViewHolder?) {
+    override fun onBindViewHolder(holder: PreferenceViewHolder) {
         super.onBindViewHolder(holder)
 
         fun applyTextColor(textView: TextView) {
@@ -37,7 +37,7 @@ internal class MasterSwitchSwitchPreference : SwitchPreferenceCompat {
                 DrawableCompat.setTint(it, attrs.switchTrackColor)
             }
         }
-        holder?.itemView?.let { view ->
+        holder.itemView.let { view ->
             background = view
             switch = view.findViewById(R.id.switchWidget)
             text = view.findViewById(android.R.id.title)

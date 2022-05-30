@@ -22,7 +22,7 @@ class NavigationActivity : AppCompatActivity(),
     }
 
     override fun onPreferenceStartFragment(
-        caller: PreferenceFragmentCompat?,
+        caller: PreferenceFragmentCompat,
         pref: Preference
     ): Boolean {
         val navController = findNavController(R.id.nav_host_fragment)

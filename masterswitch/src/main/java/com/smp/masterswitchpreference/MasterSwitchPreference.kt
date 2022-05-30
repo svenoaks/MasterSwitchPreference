@@ -11,7 +11,7 @@ import java.io.File
 @Keep
 open class MasterSwitchPreference : Preference {
     constructor(
-        context: Context?,
+        context: Context,
         attrs: AttributeSet?,
         defStyleAttr: Int,
         defStyleRes: Int
@@ -19,7 +19,7 @@ open class MasterSwitchPreference : Preference {
         inflateAttrs(attrs)
     }
 
-    constructor(context: Context?, attrs: AttributeSet?, defStyleAttr: Int) : super(
+    constructor(context: Context, attrs: AttributeSet?, defStyleAttr: Int) : super(
         context,
         attrs,
         defStyleAttr
@@ -27,7 +27,7 @@ open class MasterSwitchPreference : Preference {
         inflateAttrs(attrs)
     }
 
-    constructor(context: Context?, attrs: AttributeSet?) : super(context, attrs) {
+    constructor(context: Context, attrs: AttributeSet?) : super(context, attrs) {
         inflateAttrs(attrs)
     }
 
@@ -76,6 +76,7 @@ open class MasterSwitchPreference : Preference {
         }
 
         companion object {
+            @JvmField
             val CREATOR: Parcelable.Creator<SavedState?> =
                 object : Parcelable.Creator<SavedState?> {
                     override fun createFromParcel(`in`: Parcel): SavedState? {
@@ -95,7 +96,7 @@ open class MasterSwitchPreference : Preference {
             R.styleable.MasterSwitchPreference,
             0,
             0
-        ) ?: return
+        )
 
         with(resAttrs) {
             val libraryAttrs =
@@ -115,7 +116,7 @@ open class MasterSwitchPreference : Preference {
 
             val def = MasterSwitchPreferenceAttrs()
 
-            val attrs = MasterSwitchPreferenceAttrs(
+            val mattrs = MasterSwitchPreferenceAttrs(
                 switchThumbColor = getColor(
                     R.styleable.MasterSwitchPreference_ms_switchThumbColor,
                     def.switchThumbColor
@@ -182,10 +183,10 @@ open class MasterSwitchPreference : Preference {
                     MasterSwitchPreferenceFragment::class.qualifiedName
                 }
             }
-            setDefaultValue(attrs.defaultValue)
-            key = attrs.key
+            setDefaultValue(mattrs.defaultValue)
+            key = mattrs.key
             fragment = fragName
-            extras.putParcelable(ATTRS_KEY_NAME, attrs)
+            extras.putParcelable(ATTRS_KEY_NAME, mattrs)
 
             recycle()
             libraryAttrs.recycle()

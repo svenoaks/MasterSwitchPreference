@@ -50,20 +50,25 @@ class SettingsActivity : AppCompatActivity(),
     ): Boolean {
         // Instantiate the new Fragment
         val args = pref.extras
-        val fragment = supportFragmentManager.fragmentFactory.instantiate(
-            classLoader,
-            pref.fragment
-        ).apply {
-            arguments = args
-            setTargetFragment(caller, 0)
+        val fragment = pref.fragment?.let {
+            supportFragmentManager.fragmentFactory.instantiate(
+                classLoader,
+                it
+            ).apply {
+                arguments = args
+                setTargetFragment(caller, 0)
+            }
         }
-        // Replace the existing Fragment with the new Fragment
-        supportFragmentManager.beginTransaction()
-            .replace(R.id.container, fragment)
-            .addToBackStack(null)
-            .commit()
-        title = pref.title
-        return true
+        if (fragment != null) {
+            // Replace the existing Fragment with the new Fragment
+            supportFragmentManager.beginTransaction()
+                .replace(R.id.container, fragment)
+                .addToBackStack(null)
+                .commit()
+            title = pref.title
+            return true
+        }
+        return false
     }
 }
 

@@ -58,6 +58,7 @@ open class MasterSwitchPreferenceFragment : PreferenceFragmentCompat() {
         explanationText.apply {
             attrs.explanationIcon?.let { iconRes ->
                 setIcon(iconRes)
+                icon?.setTint(attrs.explanationIconTintColor)
             }
         }
     }

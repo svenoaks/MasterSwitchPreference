@@ -9,8 +9,8 @@ android {
         applicationId "com.smp.masterswitchpreference.sampleapp"
         minSdkVersion 21
         targetSdkVersion 33
-        versionCode 8
-        versionName "0.11.0"
+        versionCode 9
+        versionName "1.0.0"
     }
 
     buildTypes {

@@ -116,19 +116,11 @@ open class MasterSwitchPreference : Preference {
                 return context.resources.getIdentifier(f, type, context.packageName)
             }
 
-            val def = MasterSwitchPreferenceAttrs()
+            val def = MasterSwitchPreferenceAttrs.defaultFromContext(context)
 
             val mattrs = MasterSwitchPreferenceAttrs(
                 switchLayout = resInt(switchLayoutRes, "layout")
                     ?: def.switchLayout,
-                switchThumbColor = getColor(
-                    R.styleable.MasterSwitchPreference_ms_switchThumbColor,
-                    def.switchThumbColor
-                ),
-                switchTrackColor = getColor(
-                    R.styleable.MasterSwitchPreference_ms_switchTrackColor,
-                    def.switchTrackColor
-                ),
                 switchOnBackgroundColor = getColor(
                     R.styleable.MasterSwitchPreference_ms_switchOnBackgroundColor,
                     def.switchOnBackgroundColor
@@ -137,9 +129,13 @@ open class MasterSwitchPreference : Preference {
                     R.styleable.MasterSwitchPreference_ms_switchOffBackgroundColor,
                     def.switchOffBackgroundColor
                 ),
-                switchTextColor = getColor(
-                    R.styleable.MasterSwitchPreference_ms_switchTextColor,
-                    def.switchTextColor
+                switchOnTextColor = getColor(
+                    R.styleable.MasterSwitchPreference_ms_switchOnTextColor,
+                    def.switchOnTextColor
+                ),
+                switchOffTextColor = getColor(
+                    R.styleable.MasterSwitchPreference_ms_switchOffTextColor,
+                    def.switchOffTextColor
                 ),
                 switchOffExplanationText = getString(R.styleable.MasterSwitchPreference_ms_switchOffExplanationText)
                     ?: def.switchOffExplanationText,
@@ -170,6 +166,10 @@ open class MasterSwitchPreference : Preference {
                     def.hideExplanation
                 ),
                 explanationIcon = resInt(icon, "drawable") ?: def.explanationIcon,
+                explanationIconTintColor = getColor(
+                    R.styleable.MasterSwitchPreference_ms_explanationIconTintColor,
+                    def.explanationIconTintColor
+                ),
                 showStatus = getBoolean(
                     R.styleable.MasterSwitchPreference_ms_showStatusInSummary,
                     def.showStatus

@@ -5,7 +5,6 @@ import android.util.AttributeSet
 import android.view.View
 import android.widget.TextView
 import androidx.appcompat.widget.SwitchCompat
-import androidx.core.graphics.drawable.DrawableCompat
 import androidx.preference.PreferenceViewHolder
 import androidx.preference.SwitchPreferenceCompat
 
@@ -26,23 +25,14 @@ internal class MasterSwitchSwitchPreference : SwitchPreferenceCompat {
         super.onBindViewHolder(holder)
 
         fun applyTextColor(textView: TextView) {
-            textView.setTextColor(attrs.switchTextColor)
+            textView.setTextColor(if (switch.isChecked) attrs.switchOnTextColor else attrs.switchOffTextColor)
         }
 
-        fun applySwitchColor() {
-            switch.thumbDrawable?.let {
-                DrawableCompat.setTint(it, attrs.switchThumbColor)
-            }
-            switch.trackDrawable?.let {
-                DrawableCompat.setTint(it, attrs.switchTrackColor)
-            }
-        }
         holder.itemView.let { view ->
             background = view
             switch = view.findViewById(R.id.switchWidget)
             text = view.findViewById(android.R.id.title)
 
-            applySwitchColor()
             if (switch.isChecked) {
                 applySwitchOnBackgroundColor()
             } else {

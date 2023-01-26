@@ -6,7 +6,7 @@ import android.graphics.Color
 import android.os.Parcelable
 import android.util.TypedValue
 import androidx.annotation.Keep
-import kotlinx.android.parcel.Parcelize
+import kotlinx.parcelize.Parcelize
 
 internal const val ATTRS_KEY_NAME = "MasterSwitchAttrs"
 

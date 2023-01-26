@@ -12,7 +12,7 @@ internal const val ATTRS_KEY_NAME = "MasterSwitchAttrs"
 
 @Keep
 @Parcelize
-class MasterSwitchPreferenceAttrs(
+data class MasterSwitchPreferenceAttrs(
     val switchLayout: Int = 0,
     val switchOnBackgroundColor: Int = Color.RED,
     val switchOffBackgroundColor: Int = Color.LTGRAY,

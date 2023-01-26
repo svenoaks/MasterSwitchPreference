@@ -106,6 +106,8 @@ open class MasterSwitchPreference : Preference {
                 getString(R.styleable.MasterSwitchPreference_ms_includedPrefScreen)
             val notIncludedPrefScreenRes: String? =
                 getString(R.styleable.MasterSwitchPreference_ms_excludedPrefScreen)
+            val switchLayoutRes: String? =
+                getString(R.styleable.MasterSwitchPreference_ms_switchLayout)
             val icon: String? = getString(R.styleable.MasterSwitchPreference_ms_explanationIcon)
 
             fun resInt(resName: String?, type: String): Int? {
@@ -117,6 +119,8 @@ open class MasterSwitchPreference : Preference {
             val def = MasterSwitchPreferenceAttrs()
 
             val mattrs = MasterSwitchPreferenceAttrs(
+                switchLayout = resInt(switchLayoutRes, "layout")
+                    ?: def.switchLayout,
                 switchThumbColor = getColor(
                     R.styleable.MasterSwitchPreference_ms_switchThumbColor,
                     def.switchThumbColor

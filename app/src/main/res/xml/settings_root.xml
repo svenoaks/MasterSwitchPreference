@@ -8,6 +8,7 @@
         app:key="@string/some_key"
         app:summary="Everything hides"
         app:title="@string/title_master_switch"
+        app:ms_switchLayout="layout/m3_switch"
         app:ms_switchThumbColor="@color/md_grey_50"
         app:ms_switchTrackColor="@color/switch_track_color"
         app:ms_switchOffText="Off"

@@ -12,6 +12,7 @@ internal const val ATTRS_KEY_NAME = "MasterSwitchAttrs"
 class MasterSwitchPreferenceAttrs(
         val switchThumbColor: Int = Color.WHITE,
         val switchTrackColor: Int = (Color.WHITE - 0x90000000).toInt(),
+        val switchLayout: Int = 0,
         val switchOnBackgroundColor: Int = Color.RED,
         val switchOffBackgroundColor: Int = Color.LTGRAY,
         val switchTextColor: Int = Color.BLACK,

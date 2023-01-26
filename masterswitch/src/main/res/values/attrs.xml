@@ -2,8 +2,6 @@
 <resources xmlns:tools="http://schemas.android.com/tools" tools:shrinkMode="safe">
     <declare-styleable name="MasterSwitchPreference">
         <attr name="ms_switchLayout" format="string" />
-        <attr name="ms_switchThumbColor" format="color" />
-        <attr name="ms_switchTrackColor" format="color" />
         <attr name="ms_switchOnBackgroundColor" format="color" />
         <attr name="ms_switchOffBackgroundColor" format="color" />
         <attr name="ms_switchOnTextColor" format="color" />

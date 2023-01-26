@@ -104,6 +104,7 @@ open class MasterSwitchPreferenceFragment : PreferenceFragmentCompat() {
                 }
             }
             attrs = this@MasterSwitchPreferenceFragment.attrs
+            applySwitchLayout()
             attrs.key.let {
                 key = it
                 setDefaultValue(attrs.defaultValue)

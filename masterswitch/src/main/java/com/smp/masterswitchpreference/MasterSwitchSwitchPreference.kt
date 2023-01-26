@@ -52,6 +52,12 @@ internal class MasterSwitchSwitchPreference : SwitchPreferenceCompat {
         }
     }
 
+    internal fun applySwitchLayout() {
+        if (attrs.switchLayout != 0) {
+            widgetLayoutResource = attrs.switchLayout
+        }
+    }
+
     internal fun applySwitchOnBackgroundColor() {
         background.setBackgroundColor(attrs.switchOnBackgroundColor)
     }

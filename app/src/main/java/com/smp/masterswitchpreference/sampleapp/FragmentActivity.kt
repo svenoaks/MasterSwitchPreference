@@ -16,8 +16,6 @@ class FragmentActivity : AppCompatActivity() {
             MasterSwitchPreferenceAttrs(
                 switchOnText = "Enabled",
                 switchOffText = "Disabled",
-                switchOffBackgroundColor = ContextCompat.getColor(this, R.color.md_grey_600),
-                switchOnBackgroundColor = ContextCompat.getColor(this, R.color.md_red_900),
                 switchOnTextColor = ContextCompat.getColor(this, android.R.color.primary_text_dark),
                 switchOffExplanationText = getString(R.string.off_explanation),
                 explanationIcon = R.drawable.ic_baseline_cake_24,

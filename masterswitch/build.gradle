@@ -10,6 +10,7 @@ android {
     compileSdkVersion 33
 
     defaultConfig {
+        namespace "com.smp.masterswitchpreference"
         minSdkVersion 21
         targetSdkVersion 33
 

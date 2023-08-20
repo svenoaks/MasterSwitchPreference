@@ -25,7 +25,9 @@ open class MasterSwitchPreferenceFragment : PreferenceFragmentCompat() {
     }
 
     val attrs: MasterSwitchPreferenceAttrs by lazy {
-        requireArguments().getParcelable<MasterSwitchPreferenceAttrs>(ATTRS_KEY_NAME)!!
+        val args = requireArguments()
+        args.classLoader = MasterSwitchPreferenceAttrs::class.java.classLoader
+        args.getParcelable<MasterSwitchPreferenceAttrs>(ATTRS_KEY_NAME)!!
     }
 
     override fun onCreatePreferences(savedInstanceState: Bundle?, rootKey: String?) {

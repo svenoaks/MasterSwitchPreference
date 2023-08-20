@@ -58,7 +58,10 @@ open class MasterSwitchPreference : Preference {
     }
 
     private val attrs: MasterSwitchPreferenceAttrs
-        get() = extras.getParcelable(ATTRS_KEY_NAME)!!
+        get() {
+            extras.classLoader = MasterSwitchPreferenceAttrs::class.java.classLoader
+            return extras.getParcelable(ATTRS_KEY_NAME)!!
+        }
 
 
     internal class SavedState : BaseSavedState {

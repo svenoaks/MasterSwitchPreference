@@ -31,6 +31,7 @@ data class MasterSwitchPreferenceAttrs(
     val explanationIconTintColor: Int = Color.LTGRAY,
     val showStatus: Boolean = false
 ) : Parcelable {
+    @Keep
     companion object {
         fun defaultFromContext(context: Context): MasterSwitchPreferenceAttrs {
             val onSurfaceVariant = resolveAttr(context, "colorOnSurfaceVariant") ?: Color.LTGRAY
